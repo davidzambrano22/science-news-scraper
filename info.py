@@ -1,3 +1,5 @@
+"""Extracts date and title info from each article in website"""
+
 import pandas as pd
 from downloader import Downloader
 from bs4 import BeautifulSoup as bs
