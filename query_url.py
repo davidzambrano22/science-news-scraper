@@ -1,4 +1,4 @@
-"""Search topic in webpage"""
+"""Dinamically generates URLs in function of a query"""
 
 from datetime import datetime
 import re
@@ -45,9 +45,7 @@ class queryUrl:
         self.to_replace = re.compile('/\?s')
         return re.sub(self.to_replace, self.path, url)
 
-#_______________________________________________________________________________________________
-"""Compares start date and end date so the first is not more higher than end date"""
-
+#Compares start date and end date so the first is not more higher than end date
 class compare_date:
     def __init__(self, start_date):
         self.day, self.month, self.year = start_date.split('-')
@@ -65,16 +63,13 @@ class compare_date:
                 return False
         return True
 
-#___________________________________________________________________________________________
-#Parse date
-"""Function that parses the input date into a valid format"""
+
+#Function that parses the input date into a valid format
 
 def parse_date(date):
     day, month, year = date.split('-')
     date_template = '{}%2F{}%2F{}'
     return date_template.format(month, day, year)
-
-#___________________________________________________________________________________________
 
 if __name__ == '__main__':
     queryUrl()
