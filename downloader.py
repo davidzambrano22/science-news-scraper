@@ -1,4 +1,4 @@
-"""Science news info scraper """
+"""Science news info scraper"""
 
 import requests
 import time
